@@ -1,0 +1,55 @@
+
+  GET|HEAD  admin/users .................................................... admin.users.index › AdminController@index
+  POST      admin/users .................................................... admin.users.store › AdminController@store
+  GET|HEAD  admin/users/create ........................................... admin.users.create › AdminController@create
+  GET|HEAD  admin/users/{user} ............................................... admin.users.show › AdminController@show
+  PUT       admin/users/{user} ........................................... admin.users.update › AdminController@update
+  DELETE    admin/users/{user} ......................................... admin.users.destroy › AdminController@destroy
+  POST      admin/users/{user}/activate .............................. admin.users.activate › AdminController@activate
+  POST      admin/users/{user}/deactivate ........................ admin.users.deactivate › AdminController@deactivate
+  GET|HEAD  admin/users/{user}/edit .......................................... admin.users.edit › AdminController@edit
+  GET|HEAD  approvals ..................................................... approvals.index › ApprovalController@index
+  GET|HEAD  approvals/all ..................................................... approvals.all › ApprovalController@all
+  GET|HEAD  approvals/{approval} ............................................ approvals.show › ApprovalController@show
+  POST      approvals/{approval} .......................................... approvals.store › ApprovalController@store
+  GET|HEAD  dashboard .......................................................... dashboard › DashboardController@index
+  GET|HEAD  forgot-password ............................ password.request › Auth\AuthController@showForgotPasswordForm
+  POST      forgot-password .................................. password.email › Auth\AuthController@sendResetLinkEmail
+  GET|HEAD  login .......................................................... login › Auth\AuthController@showLoginForm
+  POST      login .......................................................................... Auth\AuthController@login
+  POST      logout ............................................................... logout › Auth\AuthController@logout
+  GET|HEAD  notifications ......................................... notifications.index › NotificationController@index
+  DELETE    notifications/delete-all-read ..... notifications.destroy-all-read › NotificationController@destroyAllRead
+  POST      notifications/read-all ..................... notifications.read-all › NotificationController@markAllAsRead
+  DELETE    notifications/{notification} ...................... notifications.destroy › NotificationController@destroy
+  POST      notifications/{notification}/read ................. notifications.read › NotificationController@markAsRead
+  GET|HEAD  register ............................................. register › Auth\AuthController@showRegistrationForm
+  POST      register .................................................................... Auth\AuthController@register
+  GET|HEAD  reports/approval-statistics ............ reports.approval-statistics › ReportController@approvalStatistics
+  GET|HEAD  reports/export-requests ........................ reports.export-requests › ReportController@exportRequests
+  GET|HEAD  reports/request-statistics ............... reports.request-statistics › ReportController@requestStatistics
+  GET|HEAD  reports/workflow-performance ......... reports.workflow-performance › ReportController@workflowPerformance
+  GET|HEAD  requests ........................................................ requests.index › RequestController@index
+  GET|HEAD  requests/create/leave .............................. requests.create-leave › RequestController@createLeave
+  GET|HEAD  requests/create/mission ........................ requests.create-mission › RequestController@createMission
+  POST      requests/leave ....................................... requests.store-leave › RequestController@storeLeave
+  POST      requests/mission ................................. requests.store-mission › RequestController@storeMission
+  GET|HEAD  requests/{request} ................................................ requests.show › RequestController@show
+  PUT       requests/{request} ............................................ requests.update › RequestController@update
+  DELETE    requests/{request} .......................................... requests.destroy › RequestController@destroy
+  GET|HEAD  requests/{request}/edit ........................................... requests.edit › RequestController@edit
+  POST      requests/{request}/submit ..................................... requests.submit › RequestController@submit
+  POST      reset-password ....................................... password.update › Auth\AuthController@resetPassword
+  GET|HEAD  reset-password/{token} ................................ password.reset › Auth\AuthController@showResetForm
+  GET|HEAD  storage/{path} ............................................................................. storage.local
+  GET|HEAD  up ....................................................................................................... 
+  GET|HEAD  workflows ..................................................... workflows.index › WorkflowController@index
+  POST      workflows ..................................................... workflows.store › WorkflowController@store
+  GET|HEAD  workflows/create ............................................ workflows.create › WorkflowController@create
+  GET|HEAD  workflows/{workflow} ............................................ workflows.show › WorkflowController@show
+  PUT       workflows/{workflow} ........................................ workflows.update › WorkflowController@update
+  DELETE    workflows/{workflow} ...................................... workflows.destroy › WorkflowController@destroy
+  GET|HEAD  workflows/{workflow}/edit ....................................... workflows.edit › WorkflowController@edit
+
+                                                                                                   Showing [51] routes
+

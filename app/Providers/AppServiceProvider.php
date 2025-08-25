@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use App\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Contracts\Debug\ExceptionHandler as ExceptionHandlerContract;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -11,7 +13,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        // Register custom exception handler
+        $this->app->bind(
+            ExceptionHandlerContract::class,
+            ExceptionHandler::class
+        );
     }
 
     /**

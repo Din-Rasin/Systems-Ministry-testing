@@ -1,0 +1,38 @@
+# Postman Test Instructions for Workflow API Routes
+
+## 1. Get all workflow templates
+- Method: GET
+- URL: http://localhost:8000/api/workflows/templates
+- Headers:
+  - Accept: application/json
+- No body required
+
+## 2. Get a specific workflow template by ID
+- Method: GET
+- URL: http://localhost:8000/api/workflows/templates/{id} (replace {id} with actual workflow template ID)
+- Headers:
+  - Accept: application/json
+- No body required
+
+## Authentication
+If authentication is required, you'll need to:
+1. First login via the login endpoint
+2. Copy the returned token
+3. Add an Authorization header to your requests:
+   - Key: Authorization
+   - Value: Bearer [your_token_here]
+
+## Example Response Format
+Both endpoints will return JSON in the following format:
+{
+  "success": true,
+  "data": {
+    // Workflow template data
+  }
+}
+
+If there's an error, the response will be:
+{
+  "success": false,
+  "message": "Error message here"
+}

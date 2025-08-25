@@ -7,17 +7,21 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+# Laravel Workflow Management System
+
+A comprehensive workflow management system for handling leave and mission requests with role-based approval workflows across different departments.
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+-   [Simple, fast routing engine](https://laravel.com/docs/routing).
+-   [Powerful dependency injection container](https://laravel.com/docs/container).
+-   Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+-   Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+-   Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+-   [Robust background job processing](https://laravel.com/docs/queues).
+-   [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
@@ -35,14 +39,14 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 
 ### Premium Partners
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+-   **[Vehikl](https://vehikl.com)**
+-   **[Tighten Co.](https://tighten.co)**
+-   **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+-   **[64 Robots](https://64robots.com)**
+-   **[Curotec](https://www.curotec.com/services/technologies/laravel)**
+-   **[DevSquad](https://devsquad.com/hire-laravel-developers)**
+-   **[Redberry](https://redberry.international/laravel-development)**
+-   **[Active Logic](https://activelogic.com)**
 
 ## Contributing
 
@@ -59,3 +63,78 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Workflow Management System
+
+This project includes a comprehensive workflow management system with:
+
+-   Role-based authentication and authorization
+-   Department-specific workflow routing
+-   Leave and mission request processing
+-   Multi-level approval processes
+-   Real-time notifications
+-   Comprehensive reporting and analytics
+
+### UI Components
+
+The system includes a complete set of UI components for all user roles:
+
+-   **Employee Dashboard** - Quick actions, request management, leave balance visualization
+-   **Team Leader Dashboard** - Approval workflows, team overview, analytics
+-   **HR Manager Dashboard** - Company-wide leave management, employee records, reporting
+-   **CFO Dashboard** - Financial analytics, mission request approvals, budget oversight
+-   **CEO Dashboard** - Executive summaries, strategic metrics, final approvals
+-   **Department Admin Dashboard** - Workflow configuration, user assignments
+-   **System Admin Dashboard** - Global configuration, user management, audit logs
+
+### Request Forms
+
+-   **Leave Request Form** - Wizard-based interface with date selection, balance validation, document upload
+-   **Mission Request Form** - Itinerary builder with destination management, budget calculator
+
+### Approval Workflow
+
+-   **Request Review Panel** - Split-screen view with request details and decision panel
+-   **Document Viewer** - Inline document preview with annotation tools
+-   **Approval History** - Timeline view of previous approvals and comments
+-   **Batch Operations** - Bulk approval functionality
+-   **Delegation System** - Temporary approval delegation interface
+
+### Analytics & Reporting
+
+-   **Interactive Dashboards** - Charts, graphs, and KPI widgets
+-   **Custom Report Builder** - Drag-and-drop report creation tool
+-   **Data Export** - Multiple format support (PDF, Excel, CSV)
+-   **Filtering Options** - Advanced search and filter capabilities
+
+### Technical Features
+
+-   **Responsive Design** - Mobile-first approach with tablet and desktop optimization
+-   **Dark/Light Mode** - Theme switching capability
+-   **Accessibility** - WCAG 2.1 AA compliance with keyboard navigation and screen reader support
+-   **Real-time Updates** - WebSocket integration for live notifications
+-   **Performance Optimization** - Caching strategies and lazy loading
+
+### Setup
+
+For detailed setup instructions, please refer to [SETUP_GUIDE.md](SETUP_GUIDE.md).
+
+You can also use the automated setup scripts:
+
+-   For Linux/Mac: [setup.sh](setup.sh)
+-   For Windows: [setup.bat](setup.bat)
+
+### Frontend
+
+The project includes a React frontend located in the [react-frontend](react-frontend) directory.
+
+### Documentation
+
+-   [Project Summary](resources/views/docs/project-summary.md)
+-   [UI Components Documentation](resources/views/docs/ui-components.md)
+-   [Database Design](database_design.md)
+-   [System Architecture](system_architecture.md)
+-   [Implementation Plan](implementation_plan.md)
+-   [Workflow Engine Design](workflow_engine_design.md)
+-   [Workflow Flowchart](laravel_workflow_flowchart.md)
+-   [API Integration Guide](API_INTEGRATION_GUIDE.md)
