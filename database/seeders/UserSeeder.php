@@ -19,12 +19,11 @@ class UserSeeder extends Seeder
         // Get departments
         $itDepartment = Department::where('name', 'IT Department')->first();
         $salesDepartment = Department::where('name', 'Sales Department')->first();
-        $hrDepartment = Department::where('name', 'Human Resources')->first();
-        $financeDepartment = Department::where('name', 'Finance')->first();
-        $executiveDepartment = Department::where('name', 'Executive')->first();
+        $hrDepartment = Department::where('name', 'HR Department')->first();
+        $financeDepartment = Department::where('name', 'Finance Department')->first();
 
         // Get roles
-        $userRole = Role::where('name', 'User')->first();
+        $userRole = Role::where('name', 'Employee')->first();
         $teamLeaderRole = Role::where('name', 'Team Leader')->first();
         $hrManagerRole = Role::where('name', 'HR Manager')->first();
         $cfoRole = Role::where('name', 'CFO')->first();
@@ -89,7 +88,7 @@ class UserSeeder extends Seeder
                 'email' => 'ceo@example.com',
                 'password' => Hash::make('password'),
                 'roles' => [$ceoRole],
-                'department' => $executiveDepartment,
+                'department' => $hrDepartment,
             ],
             [
                 'name' => 'System Admin',
