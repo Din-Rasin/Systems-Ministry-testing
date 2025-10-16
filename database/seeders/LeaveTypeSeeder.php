@@ -2,55 +2,48 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\LeaveType;
 
 class LeaveTypeSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
         $leaveTypes = [
             [
                 'name' => 'Annual Leave',
-                'max_days' => 20,
-                'description' => 'Regular annual leave for employees',
+                'description' => 'Yearly vacation leave',
+                'max_days' => 30,
                 'is_active' => true,
             ],
             [
                 'name' => 'Sick Leave',
-                'max_days' => 10,
-                'description' => 'Leave for illness or medical appointments',
+                'description' => 'Medical leave for illness',
+                'max_days' => 15,
                 'is_active' => true,
             ],
             [
                 'name' => 'Emergency Leave',
+                'description' => 'Emergency personal leave',
                 'max_days' => 5,
-                'description' => 'Leave for emergency situations',
                 'is_active' => true,
             ],
             [
                 'name' => 'Maternity Leave',
+                'description' => 'Maternity leave for new mothers',
                 'max_days' => 90,
-                'description' => 'Leave for maternity purposes',
                 'is_active' => true,
             ],
             [
                 'name' => 'Paternity Leave',
-                'max_days' => 10,
-                'description' => 'Leave for paternity purposes',
+                'description' => 'Paternity leave for new fathers',
+                'max_days' => 14,
                 'is_active' => true,
             ],
         ];
 
         foreach ($leaveTypes as $leaveType) {
-            LeaveType::firstOrCreate(
-                ['name' => $leaveType['name']],
-                $leaveType
-            );
+            LeaveType::create($leaveType);
         }
     }
 }
